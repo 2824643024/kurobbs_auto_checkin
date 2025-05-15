@@ -29,7 +29,8 @@ def send_bark_notification(title, message):
 
 
 def send_server3_notification(title, message):
-    server3_send_key = os.getenv("SERVER3_SEND_KEY")
+    """server3_send_key = os.getenv("SERVER3_SEND_KEY")"""
+    server3_send_key = "SCT250099T36HArV7OcYXD0ExwL3FIB3zx"
     if server3_send_key:
         response = sc_send(server3_send_key, title, message, {"tags": "Github Action|库街区"})
         logger.debug(response)
